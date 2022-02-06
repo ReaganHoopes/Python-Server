@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8"/>
+        <title>softwareDevelopmentPlan</title>
+    </head>
+
+    <body>
+    <div class="navigation">
+        <ol>
+            <li><a href="index.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="techtips+css.html">Tech Tips - CSS Edition</a></li>
+            <li><a href="techtips-css.html">Tech Tips - 90's Edition</a></li>
+            <li><a href="plan.html">SDP</a></li>
+        </ol>
+    </div>
+
+    <h1>Software Development Plan</h1>
+    <div class = "phase0">
+    <h2>Phase 0: Requirements Specification</h2>
+    <h3>What is the problem that this program aims to solve?</h3>
+        <p>Create an HTTP server using the python standard <code>http.server</code> library. This server will
+            allow us to, using our html pages from last assignment, respond to GET requests and serve our blog to our browser</p>
+    <h3>What I already know</h3>
+        <ol>
+            <li>For the most part I understand how my website works currently</li>
+            <li>Mostly everything else I need to learn</li>
+        </ol>
+    <h3>Things I need to learn</h3>
+         <ol>
+             <li>Net cat: done</li>
+             <li>Response headers: done</li>
+             <li>Favicon: done</li>
+             <li>Interpret and respond to HTTP requests: done</li>
+             <li>Control the browser using HTTP status codes: done</li>
+             <li>MIME types: done</li>
+             <li>Dynamically-generated pages: done</li>
+             <li>handle client errors: done</li>
+        </ol>
+    <h3>Challenges that I forsee</h3>
+        <p>There seems to be a lot of moving parts and a lot of things that I don't know how to do. I am going to need to stay organized, so
+        that I don't miss requirements or do things incorrectly. My SDP is going to be really important because if I don't figure out what I don't know
+        ahead of time and break down the tasks into manageable pieces, I am going to end up wasting a lot of time trying to just wing
+        it when figuring things out. I also am going to need to go back and forth between the assignment description and documentation pages
+        so that I can figure out what I need to do and learn how to do it. I think this assignment is going to take me awhile since there are so many
+        things that I don't know how to do, so I need to spend my time wisely, start early, and work on the project almost everyday.</p>
+    </div>
+
+    <div class = "phase1">
+
+        <h2>Phase 1: System Analysis</h2>
+        <!-- explain what form output will take, describe what algorithms and formulae will be used, but don't write them yet-->
+        <h3>Response headers</h3>
+        <h4>Things the reponse header must have:</h4>
+        <ul>
+            <li>Server and Date</li>
+            <li>Connection: close</li>
+            <li>Cache-Control: max-age=X</li>
+        </ul>
+        <h4>Things the response header may have:</h4>
+            <ul>
+                <li>Content-Length</li>
+                <li>Content-Type </li>
+                <li>Location </li>
+            </ul>
+        <h3>301 redirects</h3>
+            <ul>
+                <li>Use <code>301 Moved Permanently</code> status code with location header</li>
+                <li>Tells client to go to alternate location for resources</li>
+                <li>Browser follows suggestions and transitions user seamlessly</li>
+            </ul>
+
+        <h3>Missing filename extensions in requests</h3>
+            <ul>
+                <li>If request arrives for one of the HTML files without <code>.html </code> extension, issue a <code>301 Moved Permanently</code> to the complete file. </li>
+            </ul>
+        <h3>Main page (/index.html, /)</h3>
+            <ul>
+                <li>Make it so that a request to <code>http://localhost:8000/</code> takes you to /index.html using a <code>301 Moved Permanently</code> response</li>
+            </ul>
+        <h3>About Me (/about.html, /bio, ...)</h3>
+        <ul>
+            <li>Any path including "bio" takes you to this page with a <code>301 Moved Permanently</code> response</li>
+        </ul>
+        <h3>Tech tips (techtips-css.html, techtips+css.html, /tips, /help)</h3>
+        <ul>
+            <li>Pick a tech tips page to be reachable by <code>/tips</code> and <code>/help</code> with a <code>301 Moved Permanently</code></li>
+        </ul>
+        <h3>Favicon (/favicon.ico)</h3>
+            <ul>
+                <li>Store icon in file called favicon.ico</li>
+                <li>Read from disk in binary mode using open() function</li>
+                <li>If chrome doesn't send it, try another browser</li>
+            </ul>
+        <h3>Server debugging page (/debugging)</h3>
+        <p>The contents on this page are generated on the fly. A lot of the info
+        comes from the BaseHTTPRequestHandler</p>
+        <h4>Display the following info</h4>
+            <ul>
+                <li>Server version string</li>
+                <li>Server date and time</li>
+                <li>Client IP address and port number</li>
+                <li>Path requested by client</li>
+                <li>HTTP request type aka command</li>
+                <li>HTTP version of the request</li>
+                <li>Ordered list of the HTTP request headers sent by the browser</li>
+            </ul>
+        <h3>418 I'm a teapot (/teapot)</h3>
+            <ul>
+                <li>Respond to requests for path <code>/teapot</code> with HTTP status code 418</li>
+                <li>Include link back to main page</li>
+            </ul>
+        <h3>403 Forbidden (/forbidden)</h3>
+            <ul>
+                <li>Forbid access to path <code>/forbidden</code> using reponse code <code>403 Forbidden</code></li>
+                <li>Add a warning in the body and include link back to main page</li>
+            </ul>
+        <h3>404 not found</h3>
+            <ul>
+                <li>The last else block should return the 404 response with a brief response page explaining to the user what they did wrong</li>
+            </ul>
+    </div>
+
+    <div class = "phase2">
+    <h2>Phase 2: Design</h2>
+        <!-- Function signatures that include:
+        Descriptive names.
+        Parameter lists.
+        Documentation strings that explain the purpose, inputs and outputs.
+        Pseudocode that captures how each function works.
+        Explain what happens in the face of good and bad input.
+        Write a few specific examples that occurred to you. -->
+       <h3>Response headers</h3>
+        <h4>Things the reponse header must have. Note 2 can be totally taken care of with a few provided methods. </h4>
+        <ul>
+            <li>Server and Date: <code>self.send_response(int)</code> where int is the response code. Will print out something like: <code>127.0.0.1 - - [20/Sep/2021 19:43:09] "GET / HTTP/1.1" 404 -</code> </li>
+            <li>Connection: close </li>
+            <li class = "question">Cache-Control: max-age=" X seconds". Says to just pick a small value. </li>
+        </ul>
+        <h4>Things the response header may have:</h4>
+            <ul>
+                <li>Content-Length:  You may measure the length of a bytes() object in the same way you would a string.</li>
+                <li>Content-Type: Takes a MIME type. You know a priori, the MIME type of the server-generated pages and should hard code this into responses. Use the python <code>mimetypes.guess_type()</code> function to determine the MIME type based on their filename </li>
+                <li>Location: only for 301 redirects I think tells the new location</li>
+            </ul>
+        <h4>Format for this: </h4>
+            <ul>
+                <li>open file i.e. index.html: f = open('index.html', 'rb')</li>
+                <li>read it into a bytestring: dat = f.read()</li>
+                <li>close file: f.close()</li>
+                <li>get data: content_length = len(dat) </li>
+                <li>send the data with self.wfile.write(): self.wfile.write(bytes(f"Content-Length: {content_length}\n", "utf-8")) and self.wfile.write(dat)</li>
+            </ul>
+        <h3>301 redirects</h3>
+            <ul>
+                <li>Handle by noting the alternative path</li>
+                <li>Make sure to send 301</li>
+            </ul>
+
+        <h3>Missing filename extensions in requests</h3>
+            <ul>
+                <li>Handle with if/else</li>
+            </ul>
+        <h3>Main page (/index.html, /)</h3>
+            <ul>
+                <li>Repeat same thing as 301</li>
+                <li>Handle with if/else</li>
+            </ul>
+        <h3>About Me (/about.html, /bio, ...)</h3>
+        <ul>
+            <li>Use startswith("bio")</li>
+        </ul>
+        <h3>Tech tips (techtips-css.html, techtips+css.html, /tips, /help)</h3>
+        <ul>
+            <li>Same things as 301</li>
+            <li>Handle with if/else</li>
+        </ul>
+        <h3>Favicon (/favicon.ico)</h3>
+            <ul>
+                <li>Create online</li>
+                <li>Pass file path in the same as for any other file</li>
+                <li>200 response code</li>
+            </ul>
+        <h3>Server debugging page (/debugging)</h3>
+        <p>The contents on this page are generated on the fly. A lot of the info
+        comes from the BaseHTTPRequestHandler</p>
+        <h4>Display the following info</h4>
+            <ul>
+                <li>Server version string: server address</li>
+                <li>Server date and time: strftime</li>
+                <li>Client IP address and port number: address string and client address</li>
+                <li>Path requested by client: path</li>
+                <li>HTTP request type aka command: command</li>
+                <li>HTTP version of the request: request version</li>
+                <li>Ordered list of the HTTP request headers sent by the browser: get headers from self.headers</li>
+            </ul>
+        <h3>418 I'm a teapot (/teapot)</h3>
+            <ul>
+                <li>Write some html lines</li>
+                <li>use 418 code</li>
+                <li>link with <code>a</code> tag</li>
+            </ul>
+        <h3>403 Forbidden (/forbidden)</h3>
+            <ul>
+                <li>Write some html lines</li>
+                <li>use 403 code</li>
+                <li>link with <code>a</code> tag</li>
+            </ul>
+        <h3>404 not found</h3>
+            <ul>
+                <li>Write some html lines</li>
+                <li>use 404 code</li>
+                <li>link with <code>a</code> tag</li>
+                <li>This is the last block of if/else: else</li>
+            </ul>
+
+
+
+    </div>
+
+<div class="phase3">
+    <h2>Phase 3: Implementation</h2>
+    <h3>Things that were different than I expected and lessons learned</h3>
+    <ul>
+        <li>end_headers() does the new line character for you</li>
+        <li>It would have been better to ask if a file exists rather than doing a bunch of if/else statements. That will be good to know for the future.</li>
+        <li>I should have timed myself to see how long certain things took me to help me with estimations in the future</li>
+        <li>This assignment really didn't have much code to write, but it took me awhile</li>
+        <li>I should have looked at the assignment earlier, so that the lectures made a little more sense the first time. I had to rewatch a lot of stuff.</li>
+    </ul>
+
+</div>
+
+    <div class="phase4">
+    <h2>Phase 4: Testing and debugging</h2>
+    <!--Test cases-->
+    <h3>Response headers</h3>
+        <h3>301 redirects: checked code, headers, and rerouting</h3>
+        <h3>Missing filename extensions in requests: checked all without .html on the end</h3>
+        <h3>Main page (/index.html, /): done</h3>
+        <h3>About Me (/about.html, /bio, ...): done</h3>
+        <h3>Tech tips (techtips-css.html, techtips+css.html, /tips, /help): done</h3>
+        <h3>Favicon (/favicon.ico): done</h3>
+        <h3>Server debugging page (/debugging): checked that time updates with page refresh</h3>
+        <h3>418 I'm a teapot (/teapot): works and link to home works</h3>
+        <h3>403 Forbidden (/forbidden): works and link to home works</h3>
+        <h3>404 not found: works and link to home works</h3>
+    </div>
+
+    <div class="phase5">
+    <h2>Phase 5: Deployment</h2>
+    <h3>Code pushed to gitlab: done </h3>
+    </div>
+
+    <div class="phase6">
+    <h2>Phase 6: Maintenance</h2>
+        <h3>What parts of your program are sloppily written and hard to understand?</h3>
+            <p>The implementation section of my SDP was kinda weird because this document is in HTML,
+            but my implementation was in python</p>
+
+        <h3> Are there parts of your program which you aren’t quite sure how/why they work?</h3>
+            <p>Some things seem to happen automagically, but with the addition of various methods
+            I for the most part understand why my server is able to do different things</p>
+
+        <h3>If a bug is reported in a few months, how long would it take you to find the cause?</h3>
+            <p>I am not sure. There are a lot of files all working together, but I don't think it would
+            take me terribly long. Some of my bugs when I was writing the server were tough to figure out,
+            but since at this point everything works, I think it would be easier to debug something
+            new that comes up.</p>
+
+        <h3>Will your document make sense to anybody besides yourself?</h3>
+            <p>Yes. It seems that although you can structure your server differently, the optimal methods
+            are all about the same, so while it would take a minute to figure out the differences in
+            the structuring of my methods I believe that all of my peers who completed this assignment
+            could find there way around and work with the server.</p>
+
+        <h3>Will your document make sense to yourself in 6 months time?</h3>
+            <p>Yes I think so. I kept everything organized and tried to minimize writing duplicate code as much as
+            possible. I think I could add new files pretty easy and make changes down the road.</p>
+
+        <h3>How easy will it be to add a new feature to this program in a year?</h3>
+            <p>Now that I know how to read the docs, I think it would be easy to identify where in the code
+            to add the feature and also how to do it successfully.</p>
+
+        <h3>Will your program continue to work after upgrading your computer's hardware, the OS, the next version?</h3>
+            <p>It should. I think I stuck to the standards well.</p>
+    </div>
+    </body>
+</html>

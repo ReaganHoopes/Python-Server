@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8"/>
+        <title>techtips+css</title>
+    </head>
+    <body>
+    <h1>Tech Tips With CSS</h1>
+    <div class="navigation">
+    <ol>
+        <li><a href="index.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="techtips+css.html">Tech Tips - CSS Edition</a></li>
+        <li><a href="techtips-css.html">Tech Tips - 90's Edition</a></li>
+        <li><a href="plan.html">SDP</a></li>
+    </ol>
+    </div>
+
+    <div class = "sheet1">
+        <h2>HTML Elements</h2>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p"><code>&lt;p&gt;</code></a></h3>
+        <ul>
+            <li>name: paragraph element </li>
+            <li>purpose: allows you to add a paragraph</li>
+            <li>display: block level</li>
+            <li>parents: any element that accepts flow content </li>
+            <li>contents: flow and palpable content </li>
+        </ul>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a></h3>
+            <ul>
+                <li>name: anchor element </li>
+                <li>purpose: creates a hyperlink </li>
+                <li>display: inline </li>
+                <li>parents: any element that accepts phrading or flow content </li>
+                <li>contents: flow, phrasing, interactive, and palpable content</li>
+            </ul>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"><code>&lt;h1&gt; - &lt;h6&gt;</code></a></h3>
+            <ul>
+                <li>name: section heading element </li>
+                <li>purpose: to create headings of varied sizes/levels</li>
+                <li>display: block level</li>
+                <li>parents: any element that accepts flow content</li>
+                <li>contents:flow, heading, and palpable content </li>
+            </ul>
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a></h3>
+            <ul>
+                <li>name: image embed element </li>
+                <li>purpose: allows you to embed an image into the file </li>
+                <li>display: inline</li>
+                <li>parents: any element that accepts embedded content </li>
+                <li>contents:none </li>
+            </ul>
+
+    </div>
+    <div class = "sheet2">
+        <h2>HTML Character Entities:</h2>
+        <h3><code>&</code><code>lt;</code></h3>
+        <ul>
+            <li>name: less than</li>
+            <li>purpose: Allows you to add <code>&lt;</code> into your code. </li>
+        </ul>
+        <h3><code>&</code><code>gt;</code></h3>
+         <ul>
+            <li>name: greater than</li>
+            <li>purpose: Allows you to add <code>&gt;</code> into your code.</li>
+        </ul>
+        <h3><code>&</code><code>amp;</code></h3>
+         <ul>
+            <li>name: ampersand </li>
+            <li>purpose: Allows you to add <code>&amp;</code> into your code.</li>
+        </ul>
+
+    </div>
+    <div class = "sheet3">
+        <h2>CSS Selectors</h2>
+        <h3>element</h3>
+        <ul>
+            <li>purpose: allows you to make certain elements have all of the same file characteristics.</li>
+            <li>example: all <code>h1</code> headers can be made red</li>
+            <li> css stylesheet code: <code>h1{color:red;} </code></li>
+        </ul>
+        <h3>.class</h3>
+        <ul>
+            <li>purpose: allows you to assign elements a class name to give them all the same characteristics.</li>
+            <li>example: make all of the text elements in one section of a webpage blue </li>
+            <li>HTML doc code: add class="className" into the opening tag such as, <code>&lt;h1 class = "blogTitles"&gt;</code></li>
+            <li>stylesheet code: <code>.blogTitles{background-color: plum}.</code> </li>
+        </ul>
+        <h3>#id</h3>
+        <ul>
+            <li>purpose: you can assign an id to a certain item, so that you can change it's specific characteristics only. This is done as follows, <code>&lt;h1 id = "header1"&gt;. </code>Your style sheet will have an entry like: <code>#header1{background-color:plum} </code> making only that header have a plum background color.</li>
+            <li>example: you can make a specific paragraph a unique font</li>
+            <li>HTML doc code: add the id name into the opening tag such as, <code>&lt;h1 id = "header1"&gt;. </code></li>
+            <li>css stylesheet code: <code>#header1{background-color:plum}</code></li>
+        </ul>
+        <h3>nth-child</h3>
+        <ul>
+            <li>purpose: allows you to select certain alternating items to change the color.</li>
+            <li>alternate the colors of items in a list to make them easier to distinguish</li>
+            <li>css stylesheet code: to make every even item plum, add the following to your style sheet. <code>li:nth-child(even){color: plum;}</code></li>
+        </ul>
+    </div>
+    <div class = "sheet4">
+        <h2>CSS Properties</h2>
+        <h3><code>color</code></h3>
+        <ul>
+            <li>purpose: changes the text color</li>
+            <li>examples: <code>red, blue, green</code></li>
+        </ul>
+        <h3><code>background-color</code></h3>
+        <ul>
+            <li>purpose: changes the background color of the element</li>
+            <li>examples: <code>pink, plum, crimson.</code> </li>
+        </ul>
+        <h3><code>font-style</code></h3>
+        <ul>
+            <li>purpose: allows you to change the font style of the text</li>
+            <li>examples: <code>oblique, italic.</code> </li>
+        </ul>
+    </div>
+    </body>

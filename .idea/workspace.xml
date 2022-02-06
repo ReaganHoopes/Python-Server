@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="975711ed-1ffd-47ba-833a-a1896db7f54e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1xdkcILuFdwQakfYlj5llLMxnmF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="975711ed-1ffd-47ba-833a-a1896db7f54e" name="Default Changelist" comment="" />
+      <created>1630692432025</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630692432025</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1227" y="151" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1632395303018">
+      <screen x="-1920" y="-170" width="1920" height="1040" />
+    </state>
+    <state x="-1227" y="151" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/-1920.-170.1920.1040@-1920.-170.1920.1040" timestamp="1632395303018" />
+    <state x="661" y="0" width="524" height="716" key="dock-window-1" timestamp="1630797139948">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="661" y="0" width="524" height="716" key="dock-window-1/0.0.1366.728/-1920.-170.1920.1040@0.0.1366.728" timestamp="1630797139948" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1632403663574">
+      <screen x="-1920" y="-170" width="1920" height="1040" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.0.1366.728/-1920.-170.1920.1040@-1920.-170.1920.1040" timestamp="1632403663574" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1632191609668">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/-1920.-170.1920.1040@0.0.1366.728" timestamp="1632191609668" />
+  </component>
+</project>

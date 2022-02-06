@@ -1,0 +1,68 @@
+h1 {
+  color: orange;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-right: 60px;
+  margin-left: 60px;
+  text-align: center;
+  font-size: 50px
+}
+h3{
+text-align:center;}
+
+body{background-color:wheat;
+}
+
+div{
+padding-top: 10px;
+padding-right: 10px;
+padding-bottom: 10px;
+padding-left: 10px;
+margin-top: 60px;
+margin-bottom: 60px;
+margin-right: 60px;
+margin-left: 60px;
+}
+
+
+.sdpTechtips{text-align: center;}
+.phase0{background-color: plum}
+.phase1{background-color: aquamarine }
+.phase2{background-color: lightcoral}
+.phase3{background-color: lightblue}
+.phase4{background-color: lightgreen}
+.phase5{background-color: orchid}
+.phase6{background-color: aqua}
+.sheet1{background-color: orchid}
+.sheet2{background-color: lightcoral}
+.sheet3{background-color: cadetblue}
+.sheet4{background-color: blueviolet}
+
+.navigation{background-color: peru;
+font-size: 25px;
+font-style: italic;
+}
+
+#entry1{
+color: cadetblue ;
+font-family: "Courier New";
+}
+
+#entry2{
+font-family: "Courier New";
+color: crimson ;
+}
+
+#entry3{
+font-family: "Courier New";
+color: blueviolet;
+}
+
+ul li:nth-child(even){
+background-color: lightskyblue;
+}
+ul li:nth-child(odd){
+background-color:lightblue;
+}
+
+
